@@ -1,0 +1,74 @@
+
+/*SCROLL FADE*/
+
+/*STYLE FOR SCROLLFADE*/
+.scrollFade {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollFade--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scrollFade--visible {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.9s ;
+}
+
+.scrollFade--animate {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.scrollFade--visible.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+
+.scrollFade--visible.fade-left {
+  animation: fade-left 1s ease-in;
+}
+
+.scrollFade--visible.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    visibility: hidden;
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    visibility: visible;
+    opacity: 0.2;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform:translateX(0);
+    visibility: visible;
+  }
+}
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    visibility: visible;
+  }
+}
